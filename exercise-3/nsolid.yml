@@ -1,0 +1,28 @@
+version: "3"
+services:
+  console:
+    image: nodesource/nsolid-console:carbon-latest
+    container_name: exercise_3_console
+    environment:
+      - NODE_DEBUG=nsolid
+    ports:
+      - 6753:6753
+      - 9001:9001
+      - 9002:9002
+      - 9003:9003
+  mongodb:
+    image: mongo
+    container_name: exercise_3_mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongoadmin
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+    ports:
+      - 27017:27017
+  # app:
+  #   image: nodesource/nsolid:carbon-latest
+  #   environment:
+  #     - NODE_DEBUG=nsolid
+  #     - NSOLID_APPNAME=in_docker
+  #     - NSOLID_COMMAND=console:9001
+  #     - NSOLID_DATA=console:9002
+  #     - NSOLID_BULK=console:9003

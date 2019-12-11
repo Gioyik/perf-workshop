@@ -1,0 +1,25 @@
+{
+  "name": "try_stuff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "api-rate-limiting": "^0.1.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.12",
+    "express-rate-limit": "^2.11.0",
+    "graphql": "^0.13.1",
+    "mocha": "^5.0.1",
+    "mongoose": "^5.0.6"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "performance_workshop_exercise_3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NSOLID_APPNAME='ExpressWorkshop' NSOLID_COMMAND='localhost:9001' nsolid index.js",
+    "load-mem": "autocannon -c 10 -d 5 -p 10 http://localhost:3001/nodes/12",
+    "load-mongo": "curl http://localhost:3001/load",
+    "compose": "docker-compose -f nsolid.yml up"
+  },
+  "keywords": [],
+  "author": "Giovanny Gongora",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.2.7"
+  }
+}
